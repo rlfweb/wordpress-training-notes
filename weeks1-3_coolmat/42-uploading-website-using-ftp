@@ -1,0 +1,27 @@
+NEED TO WATCH SUPERHI WORDPRESS VIDEO FOR THIS 
+
+File Transfer Protocol
+
+We can connect to server just like we can do with folders on our computer. 
+
+Go to SFTP tab under Access in our fortrabbit Dashboard
+
+There are three parts:
+
+We need a server address
+
+We need a username
+
+We need a password - this is our fortrabbit account password 
+
+We are going to use an application to connect to our FTP. 
+
+It's called transmit, made by company called Panic. It's a paid for option. 
+
+Otherwise try Cyberduck which is free. 
+
+Using Trnsmit, load it up. 
+Lawrence already has some files there. 
+Now connect to new Coolmat server. 
+Add new SFTP server. 
+

@@ -1,0 +1,20 @@
+Go to Wordpress
+Dashboard
+Settings
+General
+
+And under Tagline it says Just another WordPress site
+
+Change this to what you want i.e.
+
+Street food that everybody loves
+
+
+You can reuse that if you want to by looking at this page: 
+https://developer.wordpress.org/reference/functions/bloginfo/
+
+And you can see there you put this code below into wherever you want that tagline to appear: 
+
+<h1>
+<?php bloginfo('description'); ?>
+</h1>

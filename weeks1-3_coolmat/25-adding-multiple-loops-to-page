@@ -1,0 +1,20 @@
+Take the content we have already and making it dynamic and updateable
+
+Currently our site has lots of hard coded parts to it, with just one DYNAMIC part for our food menu items. 
+
+By using multiple loops we can display posts from different places in custom ways and make it all dynamic and changeable
+
+wordpress loop to get the hero section to display not the hard coded 'fried seaweed roll' but instead, grab a random food menu item and display it alongside coolmat. 
+
+Just google wordpress loop to get some of that code i.e. 
+
+<?php 
+if ( have_posts() ) {
+	while ( have_posts() ) {
+		the_post(); 
+		//
+		// Post Content here
+		//
+	} // end while
+} // end if
+?>

@@ -1,0 +1,85 @@
+In content.php Wrap the item_number in a span tag
+
+<div class="entry_number">
+<span>
+<?php echo $item_number; ?>
+</span>
+</div>
+
+
+In custom.css 
+
+
+.post {
+  position: relative;
+//Create some empty space for the number to sit inside of
+  padding-top: 60px;
+}
+
+.entry-number {
+// We want to position our number so it is absolutely posotioned in relation to the box that each post or menu item occupies 
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: solid 20px #FF0074;
+// Offset it by 50% of its width as the default is to have the left hand side to be 50% along the item box
+  transform: translateX(-50%);
+// Border radius makes it a circle
+  border-radius: 50%;
+// use flex to align the text span tag in the centre vertically and horizontally
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff0064;
+  z-index: 1;
+}
+
+
+TO MAKE THIS RESPONSIVE: 
+
+give the entry-number a z-index of 1
+And give entry-title and entry-price a postiion of relative and a z-index of 2. 
+
+entry-title,
+entry-price {
+  z-index: 2;
+}
+
+So if items are going to be layered, you can use z-index to indicate which elements should be on top of each other. 
+
+So the higher the z-index number, the more on top (layer-wise) they should be. 
+
+
+THEN ADD MEDIA QUERIES
+
+/* you can add in media queries to shrink down number */
+/* this code will only be used when browser viewpoint is below 1100 pixels wide */
+@media (max-width: 1100px) {
+.entry-number {
+  width: 60px;
+  height: 60px;
+  border-width: 15px;
+}
+
+.post {
+  padding-top: 45px;
+}
+}
+
+@media (max-width: 480px) {
+  .entry-number {
+    width: 30px;
+    height: 30px;
+    border-width: 4px;
+  }
+  
+  .post {
+    padding-top: 19px;
+  }
+  }
+
+
+

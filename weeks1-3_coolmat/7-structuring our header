@@ -1,0 +1,60 @@
+Structuring our header
+
+Open header.php
+
+Delete all this: 
+
+			<?php
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) :
+				?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php
+			else :
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			endif;
+			$coolmat_description = get_bloginfo( 'description', 'display' );
+			if ( $coolmat_description || is_customize_preview() ) :
+				?>
+				<p class="site-description"><?php echo $coolmat_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<?php endif; ?>
+
+Within the site-branding div, we can put our logo, which will be top left of our site. 
+
+
+Our Nav has already been done for us but we are going to delete the button (a feature for mobile screens to grow and shrink the button, which we don't need), so we have this: 
+
+<nav id="site-navigation" class="main-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+
+ADD IN THE LANGUAGE selector
+
+	<!-- todo - make this work - Language selector -->
+    <div class="language-select">
+    KOR | EN 
+    </div>
+
+
+CREATE A FOLDER CALLED assets, AT SAME LEVEL AS css FOLDER
+
+And drag any assets you have into there i.e. logo, hero image, logos for instagram, facebook etc. 
+
+And can then insert into your header.php using this code: 
+
+<div class="site-branding">
+		<!-- here we link to logo from assets folder -->
+		<img src="<?php bloginfo('template_url'); ?>/assets/coolmat_logo.svg"/>
+</div>
+
+And it's an svg image, so you can zoom in as much as you want and you won't get any pixellation. Crisp vector image. Scalable Vector Image SVG 
+

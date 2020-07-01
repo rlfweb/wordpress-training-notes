@@ -1,0 +1,17 @@
+Add intro text into custom post type area
+
+Go into Wordpress dashboard and copy over the text from intro post into new Intros custom post type 
+
+Select Intro category and publish
+
+Then bin the old one and empty bin, to clear it out. 
+
+To display the post, we can query by category name, we can also query by type of post. 
+
+For example, if we were making an online shop, we could do 
+<?php query_posts( 'post_type=product'); ?>
+
+And with that we can then loop over the custom posts as we're used to doing already 
+
+So in index.php, where we query for our posts to display the intro, change category_name=intro to post_type=intro
+

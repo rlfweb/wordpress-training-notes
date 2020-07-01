@@ -1,0 +1,112 @@
+How loops work in Wordpress
+
+By default, in wordpress, the homepage is index.php
+
+We can use dynamic php backend code to do things like this: 
+php code - get_header(); and the index.php goes off and grabs the code from header.php and effectively pastes it into where get_header(); is
+
+Same for get_footer(); at the bottom of index.php
+
+So what we see on index.php is a combination of files, so in front end we just see the combined files. 
+
+Makes it quick to change as you just change header.php and that changes it across your site. 
+
+Loops in Wordpress
+We take a list of items, loop through each item and do something with it i.e. display it. 
+
+THIS IS THE CODE FROM INDEX.PHP THAT DISPLAYS THE POSTS:
+
+/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
+
+// it's saying - if we have any posts, then use the_post();
+
+				/*
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+// this displays the post
+				get_template_part( 'template-parts/content', get_post_type() );
+// get-post-type lets us use different types such as video, photos etc. 
+			endwhile;
+
+
+How about individual posts? How do they work and how do we display the data for them in our templates? 
+
+Template Tags
+
+when we use a loop, we get access to each individual post and its data. WordPress has lots of in-built template tags that let us take that data and display it inside our templates. 
+
+Here we have the example of our standard blog-style post and how we can get things like title and content from it using WordPress template tags i.e. 
+<?php the_title(); ?>
+<?php posted_on(); />
+<?php the_content(); ?.
+</php the_post_thumbnail(); />
+Google wordpress cheat sheet for lists of these template tags 
+
+Using the default wordpress structure will give us something that looks like a blog. 
+using that same structure, we can take out some bits we don't need and then move things around to fit our design. 
+
+So if we want title on the left, search the cheat sheet for whatever the template tag is for the Title of a specific post or page. 
+We can see that is the_title();
+So we insert that in php tags within the html of content.php 
+php tags look like this: 
+<?php CONTENT ?>
+and you can put php tags in a h1 tag or a div tag etc. 
+
+CAN PUT THIS IN TO HAVE THE POST TITLE APPEARING AND GIVE A CLASS NAME SO WE CAN STYLE IT LATER WITH CSS
+<!-- Title on the left  -->
+<h1 class="entry-title">
+<?php 
+the_title();
+?>
+</h1>	
+
+CAN PUT THIS HERE IN A DIV TO GET THE PRICE APPEARING, AGAIN WTIH A CLASSNAME 
+
+<!-- Price on the right -->
+<div class="entry-price">
+<?php 
+the_content();
+?>
+</div>
+
+
+DELETE ALL OF THIS THEN IF WE DON'T WANT IT APPEARRING HERE 
+
+DELETE THE FOOTER STUFF 
+
+	<footer class="entry-footer">
+		<?php coolmat_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
+
+
+DELETE ALL THE ENTRY CONTENT STUFF
+
+  	<div class="entry-content">
+		<?php
+		the_content(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'coolmat' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				wp_kses_post( get_the_title() )
+			)
+		);
+
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'coolmat' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	</div><!-- .entry-content -->

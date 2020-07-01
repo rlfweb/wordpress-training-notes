@@ -1,0 +1,40 @@
+Have a heading at the top
+Then menu items in two columns and 3 rows with pixel gaps between rows and columns
+
+Go to index.php
+
+We go through loop and grab the data for each post (or menu item) and display them. 
+
+CAN DELETE THIS AS WITH THE SCREEN-READER-TEXT WE ARE NOT VIEWING IT AS A PAGE SO DON'T NEED THE TITLE HERE
+
+			if ( is_home() && ! is_front_page() ) :
+				?>
+				<header>
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				</header>
+				<?php
+			endif;
+
+      WE are going to wrap all the posts in a div with a class of "food-grid"
+      And put all our php loop code inside of that div
+
+      CSS grid
+      Solves a lot of layout problems. It's very powerful. 
+      We are going to use a small part of it. 
+      i.e. this below puts our six posts (menu items) into two columns and three rows, with gaps between. 
+
+  .food-grid {
+    display: grid;
+  /* 1 fraction 1 fraction is 2 columns */
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 50px;
+    grid-column-gap: 20px;
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+https://www.superhi.com/video/introducing-css-grids
+
+https://www.superhi.com/video/overlapping-layouts-with-css-grid

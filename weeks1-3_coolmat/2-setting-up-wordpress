@@ -1,0 +1,64 @@
+Go to wordpress.org
+https://en-gb.wordpress.org/
+
+Click Get wordpress / Download wordpress
+
+This will download a zip file into Downloads folder
+
+Double click to unzip
+
+Drag folder to where you want the files to live on your computer.
+
+Rename folder what you want website to be called e.g. coolmat
+
+Change settings within MAMP to point at the new folder i.e. MAMP, preferences, Web-Server, and change root folder to your new one. Apache should be selected. 
+
+And can click Start Servers from within the MAMP box. 
+Apache and MySQL servers should both be green lit. 
+(Cloud is red as this is a paid for service)
+
+This should automatically open the MAMP php configuration page on localhost:8888
+(otherwise click on WebStart on within the MAMP box)
+
+To add a database, click on phpMyAdmin, to bring up the window for this
+
+Click on New (top of sidebar on left)
+Create database - put in a name i.e. coolmat. Keep collation selected. 
+Click Create
+Should see new database appear in list on the left.
+
+Go back to localhost:8888 and refresh. This brings up the Wordpress start page. 
+http://localhost:8888/wp-admin/setup-config.php
+
+Click Let's Go! to install wordpress
+Database Name: coolmat (or whatever mine is)
+Username: root
+Password: root
+Database Host: localhost (stays the same)
+Table Previx wp_ (stays the same)
+Submit
+
+You get "All right, sunshine! You’ve made ... "
+Click Run the installation
+
+You get the Welcome screen: 
+
+This info would be your login for accessing the wordpress site so enter details carefully as you can lock yourself out if you lose these details. 
+So ...
+Site Title: coolmat
+Username: rlfweb8
+Password: Tufted11
+Click Install WordPress
+
+Should get Success! screen. 
+Then Log In. 
+
+Go to underscores.me and create the basic theme. 
+Name it coolmat and generate it
+This downloads it onto your computer as a zip
+Double click to unzip
+Then drag into wp-content/themes
+
+Then go into Dashboard, Appearance, Themes and Activate the new theme coolmat
+When you preview site, you can see it's pretty unstyled, but it has good skeleton
+

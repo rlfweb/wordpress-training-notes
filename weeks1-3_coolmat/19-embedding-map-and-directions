@@ -1,0 +1,31 @@
+Will hard code it first and then make it dynamic later, so it can be edited from within wordpress
+
+In index.php
+
+Put in a new div:
+
+<div class="section-heading" id="locations">
+	Directions to cool mat 
+</div>
+
+And then rename the food-title class in the css to section-heading. 
+
+And then remember to find in index.php where you had used the food-title and change that also to section-heading
+
+And then you have made a reusable class for all headings 
+
+Set up the divs for the structure of the map area - see index.php 
+
+And then we are going to put a live googlemap on the page. 
+So go to googlemaps and type in the address. 
+284-10 Yeomchang-dong, Gangseo-gu, Seoul
+
+You click SHARE
+Then Embed a map 
+Select Medium size
+And then Copy the HTML
+
+Gives us an iframe tag that we paste into our map-inner class div
+
+And iframe tag is a bit like a black hole (we have no control over the content inside of there) that allows us to embed content from other websites like widgets, facebook comments, tweets. These are iframe tags. 
+Is it a source that you trust and would want to embed on your site? 

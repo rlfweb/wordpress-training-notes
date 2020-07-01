@@ -1,0 +1,61 @@
+Wordpress Dashboard, Plugins, Add New
+
+Search for Advanced Custom Fields. The first one, by Elliot Condon
+
+Look at how many reivews, how many stars, how many installations, when it was last updated to decide which ones to use. 
+
+Click Install Now
+
+Then Instead of clicking Activate, go to Installed Plugins tab on the left hand side menu of Dashboard. 
+
+Click Activate under Advanced Custom Fields
+
+This puts a new Menu at the bottom of our Dashborad called Custom Fields. 
+
+Field Groups are groups of custom inputs that we can attach to our posts. 
+
+Add New Field Group and name it Locations Group 
+
+We want a field for our map, so add a Field Label of Map
+
+This automatically puts map in Field Name
+
+Field Type can be Text
+
+Everything else we can leave as it is. 
+
+Don't need to click +Add Field as this is done automatically for us. 
+
+We do need to change the Location box options. 
+
+Where it says
+Show this field group if Post Type is equal to [Post] change this to [Location] (remember Location is one of our custome post types that we created before)
+
+We can also add other rule groups so for example if Post Type is equal to intro, for example. 
+
+We don't need the extra Options below. 
+
+Click Publish and it's ready to use. 
+
+If we go to Locations in our Dashboard (our new post type) and open the Seoul post, we have a new field at the bottom called Map. 
+
+You can put anything in there like 'Hello, does this custom field work?' and then you can update it to test it. 
+
+Go back to the ACF website and on the homepage, where it says Made for developers, you can see in single.php the text you would use: 
+
+<?php if( get_field('sub_heading') ): ?>
+    <h2><?php the_field('sub_heading'); ?></h2>
+<?php endif; ?>
+
+i.e. if you have this field called sub_heading, use the field called sub_heading
+
+So we'll use it like this, pasted into the correct place in index.php 
+
+<?php if( get_field('map') ): ?>
+<?php the_field('map'); ?>
+<?php endif; ?>
+
+And then you can save and refresh your page. If you see Hello, does this custom field work?
+then you know it works. 
+
+And then you can replace it with your google iframe tag. 

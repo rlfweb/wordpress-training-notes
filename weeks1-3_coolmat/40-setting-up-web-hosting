@@ -1,0 +1,25 @@
+So far we've just been running our site on our computer - on our localhost. 
+
+Not viewable by outside world
+
+Getting our website online! 
+
+Setting up web hosting - on a server - it's job is to serve our website when someone visits our URL
+
+www.fortrabbit. Does php hosting for you. 
+EUR5 a month. 
+Also does larabel, symfony etc., not just wordpress
+Takes care of performance and security. 
+
+Set up an account 
+
+Dashboard, Apps, Create an App. 
+Choose an App name - you won't be able to choose coolmat as they all need to be unique. 
+
+Choose a software - select Wordpress. 
+Choose data centre location - EU-Ireland - based on where the users are who are going to visit our site. 
+Data Centre is a giant warehouse filled with servers. Take 10-15 mins to walk from one side to the other. Racks of servers that stay on all the time. 
+
+Choose a light, hobby project. 
+
+I could start a free trial if it's my first one. 

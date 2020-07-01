@@ -1,0 +1,27 @@
+If we want to create a box of same width and height, it's not that straightforward. 
+i.e. 400x400 or 600x600
+
+On the element's style:
+background-color: blue:
+padding-bottom: 100%
+
+The padding is relative to the width of the element. If you say 50% you get a 2x1 block. Or 200% you get a 1x2 block. 
+
+We are going to position map so it takes up 100% of the box here. 
+
+In custom.css
+
+/* here we create ourselves a box that has 1.33 x 1 dimensions using padding-bottom trick (also known as aspect ratio box in css */
+.map-inner {
+  position: relative;
+  padding-bottom: 75%;
+}
+
+/* here we overide the default width and height of the map */
+.map-inner iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: auto !important;
+}

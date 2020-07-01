@@ -1,0 +1,129 @@
+If you go to fonts.google.com there are a whole series of fonts that are free to use on the web. 
+
+To find a particular font i.e. hanna which can be used for western and korean alphabets
+
+google: google font hanna
+
+Will find early access page. 
+https://fonts.google.com/earlyaccess
+
+Scroll down til find Hanna (Korean)
+Copy the Link
+and paste into the top of our custom.css file
+
+This takes care of embedding fonts in all formats we need for the web. 
+
+And then we use it by pasting this (from the google fonts page) into our custom.css
+
+body {
+  font-family: 'Hanna', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+
+default colour of font is black - hex 000
+
+The default sans-serif on a mac is helvetica and on windows is arial. 
+
+=================
+
+Google have recently released a whole series of webfonts in Korean, for use on the web. 
+
+Normally non-western alphabets gets neglected, which means typography can't play big part for non-western alphabets. 
+
+But google have put together a good one for Korean. 
+
+googlefonts.github.io/korean/
+
+So there will be an outer box for the whole site - 1440 pixels wide. 
+And then an inner box for the header - 1380 pixels wide. 
+
+Below 
+<header id="masthead" class="site-header">
+
+Put a new div with class of header-inner i.e. 
+
+	<div class="header-inner">
+AND INSIDE HERE PASTE THE WHOLE OF THE CONTENT I.E. THE LOGO, THE NAV BAR AND THE EN|KOR TEXT
+	</div>
+
+in custom.css write selectors for the different styles i.e.
+.site-header {
+SEE BELOW
+}
+
+.site-header {
+// 30px of gutter - create space inside of an element, use padding 
+  padding: 30px;
+// a pale grey line below the site-header element
+  border-bottom: solid 1px #ccc;
+}
+
+.header-inner {
+// sets max width for this element 
+  max-width: 1380px;
+// to centre something within an element use left and right margin as auto 
+  margin-left: auto;
+  margin-right: auto;
+// we use flexbox to align the header content automatically 
+// uses flexbox
+  display: flex;
+// justify the spaces between the elements - equal spacing
+  justify-content: space-between;
+// bottom aligns the items to the flex box 
+  align-items: flex-end;
+}
+
+in header.php, add class of logo into logo tag:
+<img src="<?php bloginfo('template_url'); ?>/assets/coolmat_logo.svg" class="logo"/>
+
+Then custom.css
+.logo{
+  display: block;
+  width: 80px;
+}
+
+
+Can actually add two css selectors and apply one set of styles like this: 
+
+.logo,
+.language-select {
+  display: block;
+  width: 80px;
+}
+
+and then  you can add another selector to give another style: 
+.language-select {
+  text-align: right;
+}
+
+And then we have the default menu for the nav bar. If we look in chrome inspector and hover over, we can see what styles and classes are applied to the nav by default. 
+We want to change that. It's got default margin, padding and is a bulleted list. So to remove that and give some padding. 
+
+.menu {
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  list-style: none; 
+}
+
+.menu-item {
+// gives some spacing btween the individual menu items
+  margin-left: 15px;
+  margin-right: 15px;
+// makes the labels for the nav bar lowercase
+  text-transform: lowercase;
+}
+
+
+TO MAKE LINKS BLACK RAHTER THAN DEFAULT BLUE: 
+in custom.css below the body selector
+
+a {
+  // makes font black
+  color: #000;
+  // removes default underline on the link 
+  text-decoration: none;
+}

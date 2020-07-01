@@ -1,0 +1,28 @@
+Editing the theme
+
+The homepage has index.php which we see by default on the homepage. It combines togeher header.php, a loop of content.php files and then our footer.php at teh bottom.  
+
+Proably want to upload a bit of content first by putting a couple of posts with images onto the site. 
+
+Open the coolmat theme by dragging the folder onto Visual Studio Code. 
+
+Initially, want to delete all you don't want. 
+In our design for coolmat, we don't use a sidebar, so we'll get rid of it altogether. The sidebar contains this kind of stuff: 
+-Recent posts
+-Recent Comments
+-Archives
+-Categories
+-Meta
+
+Open index.php from within the coolmat theme
+around line 58 it has a template tag that says get_sidebar();
+There are lots of template tags in wordpress. They let us grab data from workdpress and display it inside of our templates.
+
+Delete this sidebar template tag and you can get rid of sidebar
+
+If you go into template-parts/content.php
+you can comment out the bits you don't want such as 
+coolmat_posted_on();
+coolmat_posted_by();
+
+You can also comment out the title or the thumbnail picture etc etc. 

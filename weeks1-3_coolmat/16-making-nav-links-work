@@ -1,0 +1,29 @@
+It's a one page website so anything we click will link to the same page
+
+But we want the nav to take us down the page to i.e. the directions
+
+We do that through id tags. 
+
+If you go to Wikipedia and you have the contents list, you click on i.e. Development and #Development gets added to the url and it whizzes you down to that part of the page. 
+
+Go to index.php
+
+Find the elements that you want to link to and add id to them. 
+
+i.e. 
+<!-- Intro and story element -->
+	<div class="intro" id="intro">
+	<div class="intro-inner">
+		<h2 class="intro-title">Introducing 	
+				<?php bloginfo('name'); ?><h2>
+
+
+And the same for the menu id="food"
+
+And then to make those links work, you go to Wordpress
+Dashboard
+Appearance
+Menus
+Menu Structure
+Click on Custom link next to each item and change to the id you set earlier
+i.e. URL would be #intro or #food or #directions

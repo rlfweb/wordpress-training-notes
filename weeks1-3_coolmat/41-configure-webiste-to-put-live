@@ -1,0 +1,36 @@
+When you get a url to work with, and click on it, you get 403-forbidden, because we hven't uploaded anything to it yet. 
+
+Readying our files and uploading them with FTP 
+
+Click WordPress install guide on the top right. 
+
+https://help.fortrabbit.com/install-wordpress-5-uni
+
+In here, you'll scroll down to the grey box under Setup environment configuration. 
+
+In our coolmat main folder, we've mainly been working in wp-content/themes
+
+But within the main folder is wp-config.php 
+
+Open that up in VSC. 
+
+And where it says 
+define( 'DB_NAME', 'coolmat' );
+
+insert 
+getenv('MYSQL_DATABASE')      ?:
+ so it now reads: 
+
+define( 'DB_NAME', getenv('MYSQL_DATABASE') ?: 'coolmat' );
+
+
+And carry on down the lines of code, pasting in the MYSQL details for NAME, USER, PASSWORD and HOST. 
+
+Leave Charset and Collate as they are
+
+And then do the next set of lines, AUTH_KEY down to NONCE_SALT
+
+When we first set up our website, we added in our database username, password and host. We found out those from our MAMP page (Open Webstart Page from the MAMP grey box - it's the details we get under MySQL on the MAMP page. When we put our webidiyr online, these details change. 
+
+So getenv() is a environment variable that lives inside the server that says, if you can find this piece of data: 'MYSQL_DATABASE' then use that, otherwise use 'coolmat'
+

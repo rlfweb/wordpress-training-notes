@@ -1,0 +1,12 @@
+POlylang lets us create korean versions of all the pieces of our content we have on our website. 
+
+For categories, we Add New Category 
+Name: intro-kr 
+Slug: intro-kr 
+Parent Category: None
+Description: leave blank
+Click Add New Category
+
+Do this for each i.e. locations-kr, menu-kr
+
+Then go into Posts and click the + symbol under the Korean flag. Add in teh correct Korean title and the price. You can see it already has the photo attached. Also put it into intro-kr category. Do this for each post. 

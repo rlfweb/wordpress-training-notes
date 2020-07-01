@@ -1,0 +1,84 @@
+full-page refresh. So in your browser pressing CMD + Shift + R (or on Windows Ctrl + Shift + R). This will force the page to update with the latest CSS changes.
+
+The hero section will be hard coded into index.php and then will make it dynamic later
+
+We have the get_header() at the top
+
+And then there's a main tag. 
+
+So the hero element goes below the main opening tag: 
+
+You can see in index.php and custom.css the changes made here to display the hero element. 
+
+INDEX.php
+
+
+	<!-- Hero element -->
+<div class="hero">
+	<div class="hero-inner container">
+		<h1 class="hero-text">
+	<!-- here we use the template tag to grab the site name -->
+			<span class="hero-sitename">
+				<?php bloginfo('name'); ?>
+			</span> fried seaweed roll</h1>
+		<p class="hero-description">
+		<span class="magenta">
+				<?php bloginfo('name'); ?> </span> is a restaurant that creates future flavour nostalgia of street food
+				
+
+		</p>
+	</div>
+</div>	
+
+
+CSS
+
+
+.hero {
+  padding-top: 160px;
+  padding-bottom: 220px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-image: url("../assets/intro-bg.svg");
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* reusable class for our inner container */
+.container {
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-text {
+  font-size: 180px;
+  line-height: 1;
+  color: #ff0066;
+  text-align: center;
+}
+
+.hero-sitename {
+  color: #000;
+}
+
+.hero-description {
+  margin: 0px;
+  position: absolute;
+  bottom: 48px;
+  left: 0px;
+  width: 100%;
+  padding-bottom: 48px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.magenta {
+  color: #ff0066;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}

@@ -1,0 +1,11 @@
+Inside 680px media query. 
+
+Open the local copy of custom.css
+
+Made the grid stack up in rows on smaller screen sizes. 
+
+Padding at bottom of locations. 
+
+We need to upload the file to the live site. 
+
+Just highlight the CSS folder in your FTP app - Transmit - and only replace that on your live site. 

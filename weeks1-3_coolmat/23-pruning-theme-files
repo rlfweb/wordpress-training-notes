@@ -1,0 +1,55 @@
+Lots of ways our theme can display our website. If we've only got a simple one page site, we can delete lots and keep only the bits we need. 
+
+We can figure out what files we need by looking at the
+
+required theme files: 
+https://developer.wordpress.org/themes/release/required-theme-files/
+
+and template heirarchy for more in depth info:
+https://developer.wordpress.org/themes/basics/template-hierarchy/
+This shows the order in which wordpress will load our files, depending on how we name them
+
+single.php - this is the file that gets used when we look at an individual post
+i.e. a single page for a single post. 
+We don't need this for our website. 
+So let's delete single.php 
+
+sidebar.php 
+If we go to Dashboard, Appearance, Widgets, we can add all kinds of things to the sidebar. But we don't need it for our site. 
+It's an old-school web feature. But can come in handy for certain things. 
+
+search.php 
+This is the results page of a search. So if you do a search We can delete that one. 
+
+style-rtl.css 
+This is for right to left languages. 
+We are not supporting those, we are just doing English and Korean, so we can delete that too. 
+
+page.php 
+If you go to Pages in the dashboard, the default Sample Page is this page. So you can delete that. 
+
+index.php
+Want to keep this - it's a required file. 
+
+header.php
+All our header, keep it 
+
+functions.php 
+We need this 
+
+footer.php 
+We need this 
+
+comments.php 
+This is for people to comment on posts and pages, we don't want comments on this website. 
+
+Then make sure you go to Dashboard, Settings, Discussion Settings and untick all the boxes on that page to disable all the comments. 
+
+archive.php 
+This allows you to display posts that have certain categories, dates or tags. 
+We don't want this for coolmat site. 
+
+404.php 
+This is what is displayed when a page can't be found. We'll get rid of this and later we'll make sure that any page that isn't found is redirected to the home page. 
+
+On SuperHi's course, there was a layouts folder with content-sidebar.css and sidebar-content.css And the tutor deleted those. I don't have them on my installation of wordpress

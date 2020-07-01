@@ -1,0 +1,20 @@
+ Go to Dashboard, Appearance, menus and create a new menu called Menu Korean
+
+ Click Create Menu. 
+
+ Then in Menu structure, Menu Settings, click it to be Primary 한국어
+
+ This will make it primary menu for when we're in Korean
+
+ Then add the links via Custom Links dropdown menu. 
+
+URL: #intro
+Link Text: 꿀맛을 소개합니다
+
+ URL: #food
+ Link Text: 메뉴
+
+ URL: #locations
+ Link Text: 오시는길
+
+To get the various other elements translated, you can go to Dashboard, Languages, Strings translations and put in the Korean versions of all those phrases 

@@ -1,0 +1,43 @@
+Use content.php for this
+
+Put in some css selectors for
+entry-header
+entry-title
+entry-price
+
+
+.entry-header {
+  padding: 20px;
+  background-color: #ff0066;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+Aligns to centre of flexbox i.e. same above and below
+
+To change images:
+When they have been inserted through WordPress CMS gallery, they come with width 1200 and height 746. To change this, if you inspect the page and mouseover the image, you see that it has a class of wp-post-image and that is what we can pick on as a selector with our custom.css
+
+/* by default wordpress sets width and height on our iamges, so we need to override this using some !important rules */
+.wp-post-image {
+  max-width: 100%;
+  width: auto !important;
+  height: auto !important;
+}
+
+
+/* by default wordpress sets width and height on our iamges, so we need to override this using some !important rules */
+.wp-post-image {
+  max-width: 100%;
+  width: auto !important;
+  height: auto !important;
+  display: block;
+}
+
+/* and get rid of anchor tag around images */
+.post-thumbnail {
+    display: block;
+    /* disable the link from being clicked so image doesn't take you to a page with the whole post*/
+    pointer-events: none;
+}

@@ -1,0 +1,15 @@
+Copyright should always be the current year - don't hardcode this - it has to be dynamic
+
+Google
+Get current year using php
+so each year that passes, our date updates
+
+<?php echo date("Y"); ?>
+
+Google date php 
+to see how it works
+https://www.php.net/manual/en/function.date.php
+
+Get a whole load of parameters you can put in
+i.e. 
+<?php echo date("H D M Y"); ?>

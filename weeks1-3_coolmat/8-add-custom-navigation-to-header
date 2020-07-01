@@ -1,0 +1,21 @@
+Can go to WordPress dashboard and under Appearance, Menus, we can customise the Nav bar. 
+
+In Menu Structure currently just have link to Home and Sample Page. Click on those and Remove. 
+
+Under Add menu items
+Click Custom links
+Url: #
+Link Text: Introducing cool mat
+
+Add the menu and directions in the same way
+
+Then click Create menu. 
+
+Under Menu Settings select Primary (we can see primary menu tag in the nav part of our header.php)
+
+Then click Save Menu
+
+This displays our menu (unstyled) on the site
+
+You can add links to Posts, Pages, Categories etc. within the Appearance, Menus page. 
+

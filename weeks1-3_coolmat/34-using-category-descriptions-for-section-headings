@@ -1,0 +1,35 @@
+Need headings like menu and directions to be able to be updated via the dashboard rather than hard coded
+
+Within our Posts, we go into Categories and then Edit Category - open the Locations category. 
+
+Within the Description box, we add "Directions to cool mat" for example
+
+And click Update. 
+
+Do teh same for Menu category - open it and change description to just the word Menu. 
+Update. 
+
+Type this into functions.php
+
+function get_category_description($query) {
+	query_posts($query . '&posts_per_page=1');
+	while ( have_posts() ) {
+		the_post();
+		$category = get_the_category();
+		echo $category[0]->category_description;
+	}
+}
+
+It's a function called get_category_description which takes in parameter of the query of the description we want back. 
+So it loops through, looks for the categories, gives us back the list of categories that apply to that post. And then we want the category that is in index point 0 in the array, which as our posts only have one category, is then the category. And then we want to print that to the screen i.e. echo the category (which is locations) and the category_description (which is directions to cool mat)
+
+And then in index.php we paste in and use the function like this: 
+<?php get_category_description('category_name=menu'); ?>
+
+And this will put our menu header in. 
+
+To get Directions to cool mat showing: use this code instead ... 
+
+<div class="section-heading" id="locations">
+	<?php get_category_description('post_type=location'); ?> 
+</div>

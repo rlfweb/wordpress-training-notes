@@ -1,0 +1,13 @@
+WordPress does things like constantly inserting paragraph tags onto our text, without our knowledge. 
+
+So we go to CSS and go to bottom, above our media queries. 
+
+for font-size can put in 4vw
+
+vw stands for viewport width
+So 100vw would mean our letters are the width of the viewport. 
+4vw means our letters are 4% of the width of the viewport
+
+This means they scale down nicely as the viewport shrinks and we always get our <br> tags breaking nicely where we want them to. 
+
+And then the other changes within custom.css media queries 

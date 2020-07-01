@@ -1,0 +1,19 @@
+We use Polylang, a translation plugin for wordpress
+
+that means whenever we go to coolmat.com/kr it loads in Korean or coolmat.com/es it loads in Spanish or coolmat.com/de it loads in German etc. etc. 
+
+There are a variety of translation plugins - polylang was the best fit for this coolmat project. 
+
+Dashboard, Plugins, Add New, search for Polylang by WP SYNTEX 
+
+If you go through the setup screen, add English first so all posts default to that. Code will be en and Order will be 0. 
+
+Then add Korean. 
+
+Or when you activate the Polylang plugin, you get another tab on your Dashboard called Languages. Can go through that and add English first and then Korean after. 
+
+For Korean, language code will be kr and the Order will be 1. 
+
+
+
+

@@ -1,0 +1,53 @@
+Enables you to order by the number. 
+
+Stack Exchange is for WordPress Dev
+Same as as Stack Overflow
+Click on All sites and you see them all there.
+
+
+To make a variable in php, you use dollar sign.
+you'd set the variable: 
+
+<?php $name = "lawrence" ?>
+<?php $age = 27 ?>
+
+then use the variable (echo means to print it out - to make it visible on the screen)
+
+<h1>
+  My name is
+  <?php echo $name; ?>
+  and I am
+  <?php echo $age; ?>
+</h1>
+
+This would print out
+My name is lawrence and I am 27
+
+
+To get a menu item number: 
+
+Google: 
+wordpress post increment number 
+
+Got his answer: 
+https://wordpress.stackexchange.com/questions/20789/print-current-post-index-number-within-loop
+
+
+Then a few down: 
+
+Hi I bumped onto this thread, wondering how to do that too. Found out it's bloody easy. In the main template file, for example index.php, declare a variable $post_idx before the loop, and within the loop increment that var. Like this:
+
+<?php $post_idx = 0; while ( have_posts() ) : the_post(); ?>
+  <?php
+    get_template_part( 'content', get_post_format() );
+    $post_idx++;
+  ?>
+<?php endwhile; ?>
+Then in your content template (for example content.php) that is executed everytime within the loop, just make $post_idx global and then use it to your needs:
+
+global $post_idx;
+print "<p>{$post_idx}</p>";
+That's it!
+
+
+So make the changes to index.php and content.php as described above and as shown in the files for the superhi coolmat website. 

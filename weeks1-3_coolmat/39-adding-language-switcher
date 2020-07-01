@@ -1,0 +1,14 @@
+coolmat.com/kr shows Korean version
+coolmat.com shows English version
+
+Polylang lets us create 
+
+In header.php where the KR | EN hard coding is. 
+
+Put in anchor tag that is:
+
+<a lang="ko-KR" hreflang="ko-KR" href='<?php echo site_url('/kr'); ?>">KR</a> | <a lang="en-GB" hreflang="en-GB" href='<?php echo site_url(); ?>">EN</a> 
+
+3 attributes
+lang and hreflang - used by browsers to detect when languages are supported
+href - gives us website URL and puts a /kr on the end and if we don't put anything into the brackets, it gives us the english version. 

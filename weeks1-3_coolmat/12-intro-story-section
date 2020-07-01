@@ -1,0 +1,28 @@
+To make something dynamic means making it something that can be changed rather than hard coded. 
+
+
+Background image - in an outer box. 
+hero.svg
+
+Text in the inner section. 960px wide
+Introducting coolmat heading. 
+
+cmd + } indents a whole paragraph that is selected
+cmd + { unindents it 
+
+
+Wherever you see cool mat, put bloginfo('name'); instead 
+
+All kinds of things in here like <br> tags for line breaks
+
+20% black text shadow: 
+In css: 
+
+text-shadow: 0 2px 0 rgba(0,0,0,0.20);
+
+R
+ed Green Blue Alpha which means opacity. So 0.20 is the opacity. 
+
+
+Lines that are only under text, not the whole block
+display: inline-block;

@@ -1,0 +1,49 @@
+NEED TO WATCH SUPERHI WORDPRESS VIDEO FOR THIS 
+
+Activate Coolmat theme on live website
+
+Our files and our data are two separate things. 
+
+To be able to get data we see here, we will use plugin to help us along. 
+
+Add new plugin to your localhost website 
+Migrate DB 
+All-in-One WP Migration by ServMask
+Install and Activate
+
+Go into it. 
+
+Export to File 
+
+Download File
+
+Install the plugin in the live online website. 
+
+Go to that and click Import from File
+
+Grab that file from your computer and import it to the live site. 
+
+Warning: this import process will overwirte your website including the database, media, plugins and themes. Plesae ensure you hae a backup of your data before proceeding to the next step. 
+
+So it's fine to do now as we are just putting our local site that we've worked on, on top of the default installation of wordpress on the fortrabbit server. But only do it like this once at the beginning, as otherwise you'll delete any data the client has added themselves. 
+
+Proceeed. 
+
+Your data has been imported successfully! 
+
+1. You must save your permalinks structure twice. (do need to do this. )
+2. Optionally, review the plugin (you don't need to do this)
+
+When you click the permalinks structure link, you get taken to login screen. When replaced data, user accounts and login details have also been replaced, with those you have in your local site so login with name and password you used when setting up local installation of wordpress for the development. 
+
+Goes to Settings, Permalinks and Save Changes. 
+Although not using permalinks, do need to have them saved. 
+
+If you click through the dashboard you can see you have all yoru site. 
+
+And if you visit coolmat.frb.io or whatever the url you set up was, you can see the site is there. 
+
+This is the live site and the data you update on the live site won't update on your local version, especially if you hand over control to the client and they add content. So make sure you don't overwrite the live site with your local site. The local site is for development and testing things out. 
+
+Moving forwards, will only be pushing new files up, not overwriting the whole site. 
+

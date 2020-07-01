@@ -1,0 +1,23 @@
+If our content requires lots of different bits of data beyond a title, date, image and some content? Say we wanted to add a spice level or some ingredients to our food menu items? 
+
+To do this we can use custom fields to attach extra data to our posts. 
+
+WordPress was originally designed as a blogging system, so it has title, body text, categories, tags, featured image coming as default. 
+
+For example, a company's About Us page might have a Name, role, location, biog, twitter and instagram handle. These are all custom fields within the posts. 
+
+the_title(); could be the name 
+the_field('role'); could be the job title 
+the_field('location); could be where they live 
+the_content(); could be the biography 
+the_post_thumbnail(); could be the photo 
+
+Hard coding our custom fields can get quite tricky to manage when our website starts growing, for both us and our clients. 
+
+We can instead rely on the Advanced Custom Fields plugin for doing more advanced things for your content. You have a UI you can go through and add and edit all these fields to your posts. 
+
+https://www.advancedcustomfields.com/
+
+Look at Field Types on this page to see what they offer: 
+https://www.advancedcustomfields.com/resources/
+

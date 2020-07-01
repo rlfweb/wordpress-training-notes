@@ -1,0 +1,73 @@
+Right click on website and click on Inspect
+
+Within Elements, we get to inspect the code, so we can rollover elements of the site and we get the html, css and javascript for each part of the code. 
+
+Within the theme folder, open style.css
+
+You can customise the top and put your own name as author and the URL as the final web address of the site. 
+
+TABLE OF CONTENTS
+
+The only things we want to keep are Normalize and Accessibility. The rest of it, we can delete.
+Normalize.css makes your website look consistent in all the different browsers. 
+i.e. chrome, firefox, safari etc. Normalize finds the inconsistencies and makes them the same. 
+Accessibility helps screen readers etc. 
+
+Within header.php, look within the head tags and you'll see 
+<?php wp_head(); ?>
+This is the tag that deals with loading css files and things like that. 
+Inside functions.php you get included with the theme and it does things each time the page loads. 160 odd lines of php code that decide what is enabled and how it is configured. 
+
+Around line 145, we have:
+function coolmat_scripts() {
+	wp_enqueue_style( 'coolmat-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'coolmat-style', 'rtl', 'replace' );
+
+wp_enqueue_style looks for a default style.css in our theme directory, which now only has 
+
+To load our own css style sheets there's a few things we need to do. 
+
+Make a new folder called css and save it in main coolmat folder, at same level as inc, js, languages, layouts etc. 
+
+Inside there create new file called custom.css
+
+And in there, create your custom styles such as: 
+see custom.css within coolmat folder
+
+Just put this code below into custom.css so you can check it is linked when you connect it up. 
+
+body {
+  background-color: red;
+}
+
+LOADING FILES GENERALLY INTO THEMES
+
+To load files into themes is diffferent in wordpress to a static website. 
+Go to cheat sheet and look for somerthing that says 'location for the site's theme files' under PHP Snippets for Header
+you see bloginfo('template_url');
+
+In header.php around line 22 above the </head> closing tag, write this: 
+
+<!-- Here we use the template URL code and then join our CSS file location onto the end. -->
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/custom.css">
+
+And this will link the stylesheet in. 
+
+BUT ... this is not the correct way to do it!
+So it's commented out in header.php 
+
+THE CORRECT WORDPRESS WAY TO LOAD CUSTOM.CSS FILE
+
+go to functions.php and around line 150, insert this: 
+
+// here we load our custom.css file using wp_enqueue_style
+	wp_enqueue_style( 'coolmat-custom', get_template_directory_uri() . '/css/custom.css');
+
+Save and reload and we should see test red background to the site. 
+
+Then we're ready to start adding html and css to our page to get it looking better. 
+
+
+Start at the top with header.php and move down the page. 
+
+

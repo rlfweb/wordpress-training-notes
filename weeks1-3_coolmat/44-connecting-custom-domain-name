@@ -1,0 +1,42 @@
+NEED TO WATCH SUPERHI WORDPRESS VIDEO FOR THIS 
+
+Housekeeping on website. 
+One the live site, log into wordpress and go to Dashboard, Users, Your Profile and Generate Password under Account Management. 
+
+This will allow you to put in a strong password, if you don't have one already. 
+
+Then save it. So no-one else can get access to the wp control panel. 
+
+Buy a domain from namecheap.com. Superhi uses iwantmyname.com 
+Lawrence bought coolmat.club 
+
+Wtihin the fortrabbit dashboard there's a Settings box and if you click on Domains, you can add new one to that.
+
+Add new domain and Add Domain. 
+
+Then it gives us the DNS settings. 
+Target DNS settings should match our Actual DNS settings 
+
+Then go to your domain name company like iwantmyname and go to the DNS Manager for the coolmat.club domain name. 
+Then copy the target settings over from fortrabbit to iwantmyname 
+
+The A record should point to i.e. 52.18.136.112
+A CNAME record should point to i.e. coolmat.frb.io. 
+
+Save DNS settings. 
+
+Mine will be different to the ones above, see video for process. 
+
+REfresh the fortrabbit page and the Target and Actual settings should be matching. 
+
+If you go to coolmat.club you should get your website (might not happen immediately)
+
+Then go to WP dashboard for live site. 
+In Settings, General, change 
+WordPress Address (URL) to https://www.coolmat.club/
+Site Address (URL) to https://www.coolmat.club/
+Copy these full addresses from your live site web address bar so you are sure they are absolutely correct. 
+
+This will redirect us back to the WP login. 
+
+It says the page isn't secure, but it takes a while to get the security certificate. But it should come thorugh and then get your secure cert. 

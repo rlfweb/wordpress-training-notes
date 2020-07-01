@@ -1,0 +1,24 @@
+Open footer.php
+
+Get rid of all the content inside of "site-info" div
+
+Set up 2 new divs. 
+Lefthand content - footer-copyright
+Two ways to get copyright symbol. Can just copy and paste it from the internet. Or can do &copy; or various other ones. 
+Hard code the year in for now. And the company. All Rights Reserved
+Righthand content - footer-social
+Two anchor tags linking to facebook and instagram
+<a href=""></a>
+Give it a class of social-links
+
+Style it up as per custom.css 
+
+Good way to get one div on one side and one on the other is to use display: flex and then justify content. 
+
+display: flex;
+justify-content: space-between;
+
+And then style up and put images in as per footer.php and custom.css 
+
+
+
