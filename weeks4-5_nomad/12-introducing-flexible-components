@@ -1,0 +1,27 @@
+flexible blocks: 
+
+Using custom fields we can create ourselves flexible content made up of components (called layouts). With these we can add, duplicate and re-arrange them in any way we want.
+
+Install another plugin 
+
+In the nomadsun-assets folder we have Advanced Custom Fields Pro 
+Drag that into nomadsun/wp-content/plugins/
+
+And that installs it into plugins on the wordpress dashboard.
+
+If I wanted to use it for a public site, I'd have to buy a licence each year. 
+
+WEEK 4 - VIDEO 20/21
+
+Adding Header and Text components 
+
+And you can then add layouts and add fields to that. 
+So can have images. 
+Or can have Text for a Content field which you'd select Field Type to be Wysiwyg so you can edit the text in different ways. 
+
+Delete Show Media Upload Buttons?
+as we want it to be text only 
+
+Click Update
+
+And when we go into Posts and Edit a post, we can see we have options for Content and can move those above and below, so we can shift content around. 

@@ -1,0 +1,27 @@
+activate our nomadsun theme
+delete the three default themes: twentytwenty etc. 
+
+Open the nomadsun theme folder in VSC.
+
+Insert a new post and call it Hong Kong. 
+These will be our country pages - and we will start with those rather than the homepage. 
+So we delete stuff from single.php and content.php 
+
+ADvanced custom fields to add bits of data 
+Install and activate the ACF plugin
+
+Add New Field Group and then three new fields
+subhead as field type: text  
+date as field type: date picker 
+hero image as field type: image. REturn value as image url
+
+Locaiton Rules can stay as is. 
+
+Then under Options, ACF lets you customsie your Posts Dashboard page. 
+So we'll hide on screen: 
+Content Editor
+Excerpt
+Discussion
+Comments
+
+Then Publish the field group 

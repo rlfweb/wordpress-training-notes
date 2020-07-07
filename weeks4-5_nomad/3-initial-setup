@@ -1,0 +1,42 @@
+Install WordPress and rename folder nomadsun 
+
+Go to underscores.me and create a theme 
+
+Called nomadsun 
+Advanced Options: Put Rebecca French in Author
+Author url - super hi?!
+Description: Nomad Sun is a travel blog featuring the most beautiful places in the world  
+
+Generate the theme and move it from Downloads into your themes folder in wp-content 
+
+Set up new repository called nomadsun in github and copy https link 
+Then in terminal: 
+git init 
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/rlfweb/nomadsun.git
+git push origin master 
+
+Then get local server setup: 
+Open MAMP
+Preferences
+Point root to our local folder nomadsun
+It opens at localhost:8888
+
+Then set up the database: 
+Open MAMP webstartpage and go into Tools, phpMyAdmin (for the world's ugliest interface!)
+Lefthand side menu - click New
+Database name: nomadsun 
+Create 
+(wordpress will set up the rest)
+
+
+go to locahost:8888 and it will open wp admin page 
+Details are on mamp webpage: 
+name: nomadsun 
+username: root 
+password: root 
+Run the Installation 
+
+Title: Nomad Sun 
+Then put in good username and password 

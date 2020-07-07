@@ -1,0 +1,30 @@
+Our hero component
+Using advanced custom fields we can organise our content into layouts (which we’ll be calling components). These can be made up of lots of sub-fields with different types of data.
+With a flexible system of components we can then add, duplicate and re-arrange them into any shape we want.
+
+As per content.php 
+
+Including getting and formatting date
+
+<!-- hero needs background image -->
+<section class="hero">
+	<div class="hero-content">
+
+	<!-- location title -->
+		<h1><?php the_title();?></h1> 
+
+	<!-- subheading -->
+	<?php if( get_field('subhead') ): ?>
+    <p><?php the_field('subhead'); ?></p>
+	<?php endif; ?>
+
+	<!-- formatted date -->
+	<p>
+		<?php if( get_field('date') ): ?> 
+	<!-- here we convert our date into format php can work with and format it to be month and year -->
+		<?php echo date("F Y", strtotime(get_field('date'))); ?>
+	</p>
+<?php endif; ?>
+
+	</div>
+</section>

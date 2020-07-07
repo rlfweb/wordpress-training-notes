@@ -1,0 +1,33 @@
+Get fonts from googlefonts and paste the Link into the top of header.php above the tachyons link 
+
+And this in css 
+
+webkit-font-smoothing: antialiased 
+This is built into browsers to soften the edges of fonts 
+
+
+body {
+  /* here we use our main typeface and set it on our body tag */
+  font-family: "Cardo", georgia, serif;
+  font-size: 18px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* wherever we use cardo class, we get cardo font */
+.cardo {
+  font-family: "Cardo", georgia, serif;
+}
+
+.archivo {
+  font-family: "Archivo Black", sans-serif;
+}
+
+.tenor {
+  font-family: "Tenor Sans", sans-serif;
+}
+
+.hero-heading,
+.hero-subhead {
+  font-size: 64px;
+}

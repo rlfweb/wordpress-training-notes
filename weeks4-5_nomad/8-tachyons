@@ -1,0 +1,67 @@
+https://tachyons.io/
+
+Copy this from homepage:
+
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+
+Paste into header.php just above 
+
+<?php wp_head(); ?>
+</head>
+
+So tachyons is on our page as it loads and we can make use of it on the page 
+
+Delete everything in style.css except for Accessibility (including from contents list)
+Delete Normalize too as that is included in tachyons 
+
+And add our own custom.css into functions.php around line 148 
+
+	wp_enqueue_style( 'nomadsun-custom', get_template_directory_uri() . '/css/custom.css');
+
+  CMD + SHIFT + R 
+  to reload with CSS 
+
+  Go onto website and see all the different classes you can add directly to elements
+
+  https://tachyons.io/docs/
+
+  https://tachyons.io/components/
+
+  https://tachyons.io/gallery/
+
+
+
+  An example of tachyons
+With tachyons we add class names to our elements that do one thing for us but do it well. We can combine multiple classes to build up our components.
+
+These are called utility classes, in this case we’re making a padded box with our largest font size set in a bold weight.
+
+================
+
+<div class="pa3">
+  <h1 class="f2 b ma0">Bold marginless padded text</h1>
+</div>
+
+Here we use the classes…
+
+pa3: padding on all sides of 3 units
+f2: the second font size in the type scale
+b: make the text bold
+ma0: zero margins on all sides
+
+
+
+
+
+============
+Styling our hero using tachyons
+
+Using a combination of tachyons classes we can build up our components from smaller pieces, which we can then re-use in other places too.
+
+<section class="hero min-vh-100 cover bg-center flex items-center justify-center">
+    <div class="hero-content white tc">
+      <h1 class="hero-heading archivo b mt0 mb3 ttu">Hong Kong</h1>
+      <p class="hero-subhead tenor mb6 mt0 ttu">Incense Harbor</p>
+      <p class="f6 date archivo ma0 ttu tracked">Underneath the glass and steel of Hong Kong’s…</p>
+    </div>
+  </section>

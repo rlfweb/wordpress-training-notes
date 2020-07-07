@@ -1,0 +1,8 @@
+Do this with CSS, within the HTML of content.php 
+
+<!-- using an inline style attribute to attach our hero image as a css background directly onto the element -->
+
+<section class="hero" style="
+<?php if( get_field('hero_image') ): ?>
+    background-image: url(<?php the_field('hero_image'); ?>);
+	<?php endif; ?>">

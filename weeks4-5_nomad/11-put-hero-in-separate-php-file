@@ -1,0 +1,19 @@
+We are currently getting all of our hero posts on the homepage becuase we have loop on content.php and that is where we have put our hero code. 
+
+So cut and paste that whole hero section into a new file. 
+
+content-hero.php
+
+And then in index.php, use this: 
+
+				// here we include our hero component file 
+				get_template_part( 'template-parts/content-hero' );
+
+within the while loop 
+
+/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
+
+
+and so we have a reusable component that we can use in different places on the site. 

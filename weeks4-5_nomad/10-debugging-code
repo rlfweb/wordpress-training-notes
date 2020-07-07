@@ -1,0 +1,13 @@
+Debugging our code with tail command
+
+Oftentimes our code will break, it happens to all of us all the time. But how can we figure out what’s going wrong?
+
+We can use a terminal to check through our error log file and it will tell us where things are going wrong.
+
+THIS IS MAMP'S ERROR LOG 
+
+tail -F /Applications/MAMP/logs/php_error.log
+
+Paste it into the Terminal. 
+And it will give an error log of whatever project MAMP is pointed to at that time. 
+

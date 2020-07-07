@@ -1,0 +1,7 @@
+Using a CSS design system
+Tachyons is a CSS toolkit that lets us quickly build up design systems and components for our page by composing together CSS classes.
+It’s designed for design, and strikes a balance between consistency and flexibility to allow for rapid prototyping and quick iterative changes when designing in the browser.
+
+This approach is similar to basscss (which we’ll use for our grid) and tailwind.css. There’s also some good writing on design systems on the Design Systems site, Brent Jackson’s, Dan Eden’s and mrmrs’ blogs.
+
+

@@ -1,0 +1,5 @@
+Components are like LEGO bricks. We can use and reuse them in multiple places to build up any number of variations of content for our page.
+
+With components we can massively cut down on repeated code, keeping things very lightweight and flexible.
+
+So might have a hero component with a background image, title, subtitle and date. And can reuse that across teh site. 
