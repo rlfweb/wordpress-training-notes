@@ -1,0 +1,11 @@
+Sometimes if you have two styles within one component, you can't use tachyons and have to use the custom.css 
+
+i.e. 
+
+.text-block h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

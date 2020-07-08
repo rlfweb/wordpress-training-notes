@@ -1,0 +1,14 @@
+Use permalink() to  link to a post
+
+<h1>
+	<a href="<?php the_permalink(); ?>">
+	Check out <?php the_title(); ?>!
+	</a>
+</h1>
+
+This would give you a link that might say 
+
+Check out Iceland! 
+
+where the whole phrase is a link to the Iceland post/page. 
+

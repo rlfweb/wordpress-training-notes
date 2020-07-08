@@ -1,0 +1,71 @@
+DELETE ALL THIS FROM HEADER.PHP
+
+		<div class="site-branding">
+			<?php
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) :
+				?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php
+			else :
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			endif;
+			$nomadsun_description = get_bloginfo( 'description', 'display' );
+			if ( $nomadsun_description || is_customize_preview() ) :
+				?>
+				<p class="site-description"><?php echo $nomadsun_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<?php endif; ?>
+		</div><!-- .site-branding -->
+
+
+
+    			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'nomadsun' ); ?></button>
+
+
+AND COMMENT OUT THE NAV 
+
+			// wp_nav_menu(
+			// 	array(
+			// 		'theme_location' => 'menu-1',
+			// 		'menu_id'        => 'primary-menu',
+			// 	)
+			// );
+
+======================
+
+INDEX.PHP 
+
+Get rid of sidebar  
+
+// get_sidebar();
+get_footer();
+
+====================
+
+footer.php 
+
+Get rid of content further down the page that you don't need so it looks like this:
+
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package nomadsun
+ */
+
+?>
+	<footer id="colophon" class="site-footer">
+	</footer>
+
+<?php wp_footer(); ?>
+
+</body>
+</html>
+
+

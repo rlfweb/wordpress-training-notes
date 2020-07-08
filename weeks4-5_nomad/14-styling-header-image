@@ -1,0 +1,36 @@
+Using tachyons, you can get things occupying a certain amount of space
+
+http://tachyons.io/docs/layout/grid/
+
+So you put in i.e.
+fl w-60 pa2
+into the class of the div
+
+To get things side by side you use flexbox 
+
+To use inline styles (i.e. below where it says style="") on div tags, overrides any css you have put in with tachyons 
+
+So want to avoid these extra style tags, unless you want to put in a background image, and then you have to do that. 
+
+
+			<!-- header	-->
+	<div class="flex"> 
+
+			<!-- header background image -->
+		<div class="w-60 min-vh-100 cover bg-center" style="
+<?php if( get_field('hero_image') ): ?>
+    background-image: url(<?php the_field('hero_image'); ?>);
+	<?php endif; ?>"></div>
+	
+			<!-- header content -->
+		<div class="w-40">
+					<!-- data shared from our hero -->
+					<?php the_field('date'); ?>
+				<!-- standard wordpress data -->
+				<?php the_title(); ?>
+				<?php the_field('subhead'); ?>
+				<!-- specific to this component -->
+				<?php the_sub_field('intro'); ?>
+		</div>
+
+	</div>
