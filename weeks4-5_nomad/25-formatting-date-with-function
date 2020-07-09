@@ -1,0 +1,15 @@
+We currently use our date in both content.php and content-hero.php 
+
+So instead we can write a function and then call it in different places. 
+
+So put this in functions.php 
+
+function nice_date($date) {
+	echo date("F Y", strtotime($date)); 
+}
+
+And where you use it, put this: 
+
+<?php 
+  nice_date(get_field('date')); 
+?>

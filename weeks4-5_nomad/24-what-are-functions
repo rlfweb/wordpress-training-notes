@@ -1,0 +1,22 @@
+php 
+
+We don't need to use much php for using wordpress and build great sites for clients 
+
+Functions let us do tasks, like calculating the total price for a shopping cart, or pulling together lots of data.
+
+We can use functions to package up tasks that may be repetitive, advanced and help us along.
+
+You can just put in any random functions into your functions.php and then use them in the rest of the site 
+
+Functions have a name, optional inputs (arguments) and optional outputs (return values.
+
+// function called shout_name with a $name argument
+function shout_name($name) {
+  // $name is a variable that represents the input
+  // the function will return the $name in uppercase
+  echo strtoupper($name);
+}
+
+// we use it like this
+shout_name('Dan!'); // gives us back `DAN!`
+Lovely stuff! But how is this useful for our WordPress code?

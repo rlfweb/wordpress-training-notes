@@ -1,0 +1,9 @@
+DRY
+Don't Repeat Yourself
+
+Cutting down on repeated code saves us time and makes life easier! 
+
+To make a change, just change your function, and it gets changed everywhere. 
+
+Function for getting hero background image 
+

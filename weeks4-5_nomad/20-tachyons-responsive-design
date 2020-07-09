@@ -1,0 +1,52 @@
+Using tachyons for responsive styles
+Tachyons is really clever and let’s us add styles that get triggered at certain responsive breakpoints.
+
+/* not small styles with `-ns` on the end */
+@media screen and (min-width: 30em) {}
+
+/* medium styles with `-m` on the end */
+@media screen and (min-width:30em) and (max-width:60em) {}
+
+/* large styles with `-l` on the end */
+@media screen and (min-width:60em) {}
+
+
+-----------
+
+
+<div class="pa1 pa2-m pa4-l w-100 w-two-thirds-m w-50-l">
+  Huzzah!
+</div>
+
+Here we change our element width and padding units at medium and large breakpoints by attaching -m and -l to the end of our class names.
+
+----
+
+Combining our classes we can trigger styles at different breakpoints.
+
+pa1 w-100 (not small, for mobile)
+pa2-m w-two-thirds-m (for screen sizes that are not small i.e. medium i.e. ipad)
+pa4-l w-50-l (for screens above medium i.e. large i.e. desktop)
+
+----------------
+
+
+https://tachyons.io/components/article-lists/title-preview-author-media-flipped/index.html
+
+pv4 bt bb b--black-10 ph3 ph0-l
+(means)
+paddingvertical4 
+border top
+border bottom
+black border of 10% opacity
+padding horizontal 3
+padding horizontal 0-large
+
+The large relates to responsive design
+
+1em is roughly equal to 16px.
+So when screen is 30em that is 480px wide
+
+ns - not small - any measurement above 30em
+m - medium
+l - large

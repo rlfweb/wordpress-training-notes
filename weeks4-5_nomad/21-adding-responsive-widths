@@ -1,0 +1,18 @@
+min-vh-100 means the image's vertical height takes up 100% of the viewport. We may want that to be 50% on mobiles with responsive design. 
+
+i.e. within content.php
+
+			<!-- header	-->
+			<!-- header only has flexbox on large screens -->
+	<div class="flex-l"> 
+
+			<!-- header background image on the left -->
+			<!-- header background has 100% width on anything below a large screen and 60% on large screens. 50vh on smaller screens and 100vh on large screens -->
+		<div class="w-100 w-60-l vh-50 vh-100-l cover bg-center" style="
+				<?php if( get_field('hero_image') ): ?>
+    		background-image: url(<?php the_field('hero_image'); ?>);
+				<?php endif; ?>"></div>
+
+			<!-- header content on the right-->
+			<!-- by default our header content block is 100% width and then width 40% on large screens -->
+		<div class="w-100 w-40-l flex items-center justify-center ph4">
