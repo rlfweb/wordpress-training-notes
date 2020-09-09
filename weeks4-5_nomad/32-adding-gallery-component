@@ -1,0 +1,31 @@
+Can go into our Post i.e. for Hong Kong and click Add component and choose Gallery. 
+
+Then you click on the Add to gallery button and choose the image you want to show. Just one if it's a full width one. 
+
+Then maybe you have some text so you click Add Component and then choose Text Block. 
+
+And then you maybe want three images in a gallery so you click Add component and choose Gallery and import the three images you want 
+
+And so on. 
+
+And then if you collapse the view of the components, you can move them around in order on the page. Super flexible and fab. 
+
+And click Update to add that to your page. 
+
+But the pictures won't appear yet as we've not got it in our code. 
+
+So go to content.php 
+
+Add this at the end of the loop where we bring in the header and the text block: 
+
+<?php elseif ( get_row_layout() == 'gallery' ): ?>
+<?php $images = get_sub_field('gallery'); ?>
+
+
+THIS IS WRONG IN SOME WAY AND DOESN'T WORK: 
+Underneath, can write:  
+<?php foreach($images as image) {
+  print_r($images);
+   } ?>
+And that will print the contents of the array onto the localhost webpage we have within the variable $images
+

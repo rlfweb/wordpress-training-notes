@@ -1,0 +1,29 @@
+Objects in php
+
+LIke JSON Objects but different syntax. 
+
+Using data in PHP
+With almost all coding languages we can store data about something (e.g. a post or image) in an object. An object is a container of related data.
+
+We’ll be using the same idea later on when we build our gallery, getting the caption and size info for our images which are stored in objects.
+
+// here we have an object called $lawrence
+$lawrence = array(
+  first_name  => 'Lawrence',
+  last_name => 'Gosset',
+  location => 'London',
+  age => 27
+);
+
+echo $lawrence['location']
+// gives us 'London'
+
+=============
+
+Inspecting our data 🔍
+If we want to inspect some code visibly on our page we can use print_r which will show us all the contents.
+
+// to see our variable’s contents in the browser we can do
+print_r($lawrence)
+
+Very useful for when we don’t know what’s going on with our data or what it looks like! print_r let’s us take a peek inside.

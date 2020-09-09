@@ -1,0 +1,28 @@
+What are arrays?
+
+Arrays are lists of things which are ordered and we can loop through. A bit like a shopping or todo list.
+
+We’ll often use the word list to talk about them because it makes more sense than the technical term array.
+
+// a list of the wonderful superhi team
+$superhi = array(
+  'lawrence', 
+  'kristen', 
+  'milan', 
+  'rik', 
+  'adam', 
+  'ryan'
+)
+
+
+Looping over arrays
+
+With our array (list) we can use foreach to loop over each individual item in there.
+// looping an array using foreach
+$superhi = array('lawrence', 'kristen', 'milan', 'rik', 'adam', 'ryan');
+
+// will loop through each item and echo it out
+foreach ($superhi as $person) {
+  echo $person;
+}
+We can even take things a step further and run functions on each item in our list, such as our shout_name function from earlier.

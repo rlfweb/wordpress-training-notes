@@ -1,0 +1,13 @@
+Images are inline block. which is somewhere between an inline elemnt like an a tag and a block element like a div. 
+
+To remove spaces between images, put display: block into the css i.e. 
+
+.gallery-image img {
+  width: auto !important;
+  height: auto !important;
+  display: block;
+}
+
+===========
+
+See content.php and content-gallery.php

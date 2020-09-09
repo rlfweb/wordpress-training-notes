@@ -1,0 +1,29 @@
+If you click on image in media libary, you get various fields you can use. 
+Title
+Alternative Text
+Caption
+Description
+
+So fill in the caption info for example: 
+
+And these can all be grabbed and displayed on the page. 
+
+<p class="caption f5 o-50 pt3 mv0>
+  <?php echo wp_get_attachment_caption(54); ?>
+</p>
+
+The tachyons there gives it 
+size f5
+opacity 50%
+padding top 3px
+margin vertical 0
+
+To add a new font, go to the top of header.php where you put in the googlefonts and at the end type &family=Archivo 
+
+So it would look like this: 
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cardo:ital@0;1&family=Tenor+Sans&family=Archivo&display=swap" rel="stylesheet">
+
+Used to look like this: 
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cardo:ital@0;1&family=Tenor+Sans&display=swap" rel="stylesheet">

@@ -1,0 +1,10 @@
+Our gallery component will be a list (array) of image attachments, stored as media in WordPress.
+
+Our image attachments can have multiple sizes, captions, alt text and we can even add custom fields to them too!
+
+Dashboard, custom Fields, location fields 
+
+Under Content, add a new layout. Name it Gallery. 
+Add a field, label it Gallery and the field type will be Gallery 
+Click Update 
+

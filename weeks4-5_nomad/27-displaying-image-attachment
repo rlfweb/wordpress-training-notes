@@ -1,0 +1,24 @@
+Can upload an image directly into Media Libary in Wordpress Dashboard. 
+
+Then if you click on the image, you get the Attachment Details opening up. 
+
+Check the url and the final number is the unique id that wordpress gives each image i.e. 54
+
+So you can use that image within your content.php by using this code below, put inside a div: 
+
+<div class="gallery-image">
+<?php echo wp_get_attachment_image(54, 'full'); ?>
+</div>
+
+The full refers to image size. Go into Settings, Media and you will get the options that wordpress give you. We'd usually want full and then style it with css. 
+
+If you upload that and then inspect it in Chrome, you can see that Wordpress gives it width and height attributes that are hard coded in. Which stops it being responsive. 
+
+Within custom.css 
+/* here we overwrite the size within wordpress so it scales responsively with the page*/
+.gallery-image img {
+  width: auto !important;
+  height: auto !important;
+}
+
+You need the !important to overwrite the existing styles. 
